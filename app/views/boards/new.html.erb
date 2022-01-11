@@ -1,2 +1,14 @@
-<h1>Boards#new</h1>
-<p>Find me in app/views/boards/new.html.erb</p>
+<h1>スレッド作成</h1>
+
+<%= form_with model: @board do |form| %>
+  <div>
+    <%= form.label :title, 'タイトル' %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :author, '作成者' %>
+    <%= form.text_field :author %>
+  </div>
+
+  <%= form.submit '作成', class: 'btn btn-primary' %>
+<% end %>

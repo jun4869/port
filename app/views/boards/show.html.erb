@@ -1,2 +1,9 @@
-<h1>Boards#show</h1>
-<p>Find me in app/views/boards/show.html.erb</p>
+<h1><%= @community.title %></h1>
+
+<% @posts.each do |post| %>
+  <div>
+    <p><%= post.contributor %></p>
+    <p><%= simple_format(post.content) %></p>
+    <p><%= post.created_at %></p>
+  </div>
+<% end %>
