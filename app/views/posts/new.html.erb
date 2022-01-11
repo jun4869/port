@@ -1,13 +1,13 @@
-<%= link_to '←戻る', board_path(@board) %>
+<%= link_to '←戻る', board_path(@board), class: 'btn btn-light mb-3' %>
 <h1>コメントする</h1>
 
 <%= form_with model: [@board, @post] do |form| %>
-  <%= form.label :contributor, '投稿者名' %>
-  <%= form.text_field :contributor %>
+  <%= form.label :contributor, '投稿者名', class: 'form-label' %>
+  <%= form.text_field :contributor, class: 'form-control mb-2' %>
 
-  <%= form.label :content, 'コメント' %>
-  <%= form.text_area :content %>
+  <%= form.label :content, 'コメント', class: 'form-label' %>
+  <%= form.text_area :content, class: 'form-control mb-4' %>
 
-  <%= form.submit '投稿' %>
+  <%= form.submit '投稿', class: 'btn btn-primary' %>
 <% end %>
 

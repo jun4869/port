@@ -1,11 +1,19 @@
-<h1>掲示板</h1>
+<h1>スレッド一覧</h1>
 
-<%= link_to 'スレッド作成', new_board_path %>
+<div class="text-right">
+  <%= link_to 'スレッド作成', new_board_path, class: 'btn btn-primary mb-4' %>
+</div>
 
 <% @boards.each do |board| %>
-  <div>
-    <p><%= link_to board.title, board_path(board) %></p>
-    <p><%= board.created_at %></p>
-    <p><%= board.author %></p>
+  <div class="mb-3">
+    <%= link_to board.title, board_path(board) %>
+    <div>
+    <span>作成者:</span>
+    <%= board.author %>
+    </div>
+    <div >
+    <span>作成日時:</span>
+    <%= board.created_at %>
+    </div>
   </div>
 <% end %>

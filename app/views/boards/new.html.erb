@@ -1,13 +1,14 @@
+<%= link_to '戻る', boards_path, class: 'btn btn-light mb-3' %>
 <h1>スレッド作成</h1>
 
 <%= form_with model: @board do |form| %>
   <div>
-    <%= form.label :title, 'タイトル' %>
-    <%= form.text_field :title %>
+    <%= form.label :title, 'タイトル', class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-control mb-2' %>
   </div>
   <div>
-    <%= form.label :author, '作成者' %>
-    <%= form.text_field :author %>
+    <%= form.label :author, '作成者', class: 'form-label' %>
+    <%= form.text_field :author, class: 'form-control mb-4' %>
   </div>
 
   <%= form.submit '作成', class: 'btn btn-primary' %>
