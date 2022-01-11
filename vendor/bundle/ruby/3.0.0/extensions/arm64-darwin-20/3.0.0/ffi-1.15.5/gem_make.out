@@ -1,5 +1,5 @@
 current directory: /Users/jun4869/git/port/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.5/ext/ffi_c
-/Users/jun4869/.anyenv/envs/rbenv/versions/3.0.2/bin/ruby -I /Users/jun4869/.anyenv/envs/rbenv/versions/3.0.2/lib/ruby/3.0.0 -r ./siteconf20220111-54544-oh8ru.rb extconf.rb
+/Users/jun4869/.anyenv/envs/rbenv/versions/3.0.2/bin/ruby -I /Users/jun4869/.anyenv/envs/rbenv/versions/3.0.2/lib/ruby/3.0.0 -r ./siteconf20220112-9996-oj4y60.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi,/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ffi... yes
 checking for ffi_prep_closure_loc() in -lffi... yes
@@ -42,4 +42,4 @@ linking shared-object ffi_c.bundle
 
 current directory: /Users/jun4869/git/port/vendor/bundle/ruby/3.0.0/gems/ffi-1.15.5/ext/ffi_c
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20220111-54544-yer8ii
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20220112-9996-oa5ojy
