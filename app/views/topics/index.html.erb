@@ -6,6 +6,7 @@
     </li>
   <% end %>
 </ul>
+<br>
 <h1>トピック新規登録</h1>
 <%= form_for @newTopic, :url => {:action => 'create'} do |f| %>
   <%= f.text_field :title %>
