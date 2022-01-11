@@ -1,4 +1,8 @@
-<h1><%= @community.title %></h1>
+
+<%= link_to '戻る', boards_path %>
+<h1><%= @board.title %></h1>
+
+<%= link_to 'コメントする', new_board_post_path(@board) %>
 
 <% @posts.each do |post| %>
   <div>
