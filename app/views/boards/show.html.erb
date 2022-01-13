@@ -1,8 +1,9 @@
 
 <%= link_to '戻る', boards_path, class: 'btn btn-light mb-3' %>
+<div class="box">
 <h1><%= @board.title %></h1>
-
-<%= link_to 'コメントする', new_board_post_path(@board), class: 'btn btn-primary mb-4' %>
+<%= link_to 'コメントする', new_board_post_path(@board), class: 'btn btn-primary mb-4 url' %>
+</div>
 
 <% @posts.each do |post| %>
   <div>

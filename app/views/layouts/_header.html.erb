@@ -1,32 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <%= link_to '何でも掲示板', boards_path, class: 'navbar-brand' %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to 'トップ', boards_path %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'スレッド作成', new_board_path %>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ユーザー
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <% if @current_user %>
-            <%= link_to 'マイページ', board_path, class: 'dropdown-item' %>
-            <%= link_to 'ログアウト', board_path, method: :delete, class: 'dropdown-item' %>
-          <% else %>
-            <%= link_to '登録', new_board_path, class: 'dropdown-item' %>
-            <%= link_to 'ログイン', new_board_path, class: 'dropdown-item' %>
-          <% end %>
-        </div>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <div class="container-fluid">
+    <%= link_to '何でも掲示板', boards_path, class: 'navbar-brand top' %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'ホーム', boards_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'スレッド作成', new_board_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="キーワードを入力してください" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">検索</button>
+      </form>
+    </div>
   </div>
-
 </nav>

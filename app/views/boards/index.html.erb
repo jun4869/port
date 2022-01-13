@@ -1,12 +1,13 @@
-<h1>スレッド一覧</h1>
 
-<div class="text-right">
-  <%= link_to 'スレッド作成', new_board_path, class: 'btn btn-primary mb-4' %>
+<div class="box">
+<h1>スレッド一覧</h1>
+  <%= link_to 'スレッド作成', new_board_path, class: 'btn btn-primary mb-4 url' %>
 </div>
+<hr>
 
 <% @boards.each do |board| %>
   <div class="mb-3">
-    <%= link_to board.title, board_path(board) %>
+    <%= link_to board.title, board_path(board),class: 'top' %>
     <div>
     <span>作成者:</span>
     <%= board.author %>
@@ -16,4 +17,5 @@
     <%= board.created_at %>
     </div>
   </div>
+  <hr>
 <% end %>
